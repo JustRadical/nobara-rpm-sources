@@ -1,6 +1,10 @@
 # Use Custom godot for now. 4.6 is broken and opengamepadui still uses 4.5
 %global godot_version 4.5
 
+%ifarch aarch64
+%global __requires_exclude ^ld-linux-x86-64\\.so\\..*|^libc\\.so\\.6\\(GLIBC_2\\.2\\.5\\)|^libdl\\.so\\.2\\(GLIBC_2\\.2\\.5\\)|^libpthread\\.so\\.0\\(GLIBC_2\\.[0-9.]+\\)|^librt\\.so\\.1\\(GLIBC_2\\.2\\.5\\)
+%endif
+
 Name:           opengamepadui
 Version:        0.44.1
 Release:        9%{?dist}

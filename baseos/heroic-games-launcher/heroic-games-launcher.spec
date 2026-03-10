@@ -16,7 +16,7 @@
 
 Name:          %{shortname}-games-launcher
 Version:       2.20.0
-Release:       1%?dist
+Release:       2%?dist
 Summary:       A games launcher for GOG, Amazon, and Epic Games
 License:       GPL-3.0-only AND MIT AND BSD-3-Clause
 URL:           https://heroicgameslauncher.com
@@ -57,7 +57,7 @@ Heroic is a Free and Open Source Epic, GOG, and Amazon Prime Games launcher for 
 %build
 pnpm install
 pnpm run download-helper-binaries
-pnpm dist:linux
+pnpm dist:linux snap
 wait
 
 %install
@@ -111,6 +111,8 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{reverse_dns}.deskto
 %{_iconsdir}/hicolor/1024x1024/apps/%{reverse_dns}.png
 
 %changelog
+* Sun Mar 08 2026 Radical <radical@radical.fun>
+- force unpacked build to fix aarch64
 * Sun Mar 02 2025 Gilver E. <rockgrub@disroot.org>
 - Update to 2.16.0
 - Fix incorrect RPM dependencies

@@ -1,0 +1,11 @@
+[copr:copr.fedorainfracloud.org:radical1:nobara-43-aarch64]
+name=Copr repo for nobara-43-aarch64 owned by radical1
+baseurl=https://download.copr.fedorainfracloud.org/results/radical1/nobara-43-aarch64/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/radical1/nobara-43-aarch64/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+priority=50

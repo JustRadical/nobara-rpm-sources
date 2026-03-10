@@ -47,8 +47,8 @@ Requires: 	python-cairosvg
 Requires: 	python-pillow
 Requires: 	python3-dbus
 Requires: 	nobara-updater
-Requires: 	nobara-resolve-wizard
-Requires: 	nobara-resolve-runtime
+#Requires: 	nobara-resolve-wizard
+#Requires: 	nobara-resolve-runtime
 
 # Gnome Deps
 Suggests:	gnome-tweaks

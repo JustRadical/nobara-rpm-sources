@@ -34,6 +34,9 @@ Source13:       brave-core.asc
 Source14:       RPM-GPG-KEY-nobara-rolling-pubkey
 Source15:       RPM-GPG-KEY-nobara-rocm-pubkey
 
+Source16: nobara-aarch64-copr.repo
+Source17: RPM-GPG-KEY-nobara-aarch64-copr.gpg
+
 %description
 Nobara package repository files for yum and dnf along with gpg public keys.
 
@@ -78,6 +81,7 @@ fi
 %config(noreplace) /etc/yum.repos.d/nv-nvb.repo
 %config(noreplace) /etc/yum.repos.d/nv-nvnf.repo
 %config(noreplace) /etc/yum.repos.d/brave-browser.repo
+%config(noreplace) /etc/yum.repos.d/nobara-aarch64-copr.repo
 
 %files -n nobara-gpg-keys
 %dir /etc/pki/rpm-gpg
