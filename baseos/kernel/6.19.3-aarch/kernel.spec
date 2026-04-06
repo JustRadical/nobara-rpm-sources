@@ -137,6 +137,10 @@ Patch23: xe-nonx86.patch
 # https://github.com/jglathe/linux_ms_dev_kit/commits/jg/ubuntu-qcom-x1e-6.19.0-jg-0
 Patch24: t14s-combined.patch
 
+# SM8550 patches
+# https://github.com/ROCKNIX/distribution
+Patch25: rocknix-combined-sm8550.patch
+
 %define __spec_install_post /usr/lib/rpm/brp-compress || :
 %define debug_package %{nil}
 # Default compression algorithm
@@ -451,6 +455,7 @@ patch -p1 -i %{PATCH21}
 patch -p1 -i %{PATCH22}
 patch -p1 -i %{PATCH23}
 patch -p1 -i %{PATCH24}
+patch -p1 -i %{PATCH25}
 %endif
 
 # Fetch the config and move it to the proper directory
